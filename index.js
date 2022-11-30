@@ -1,10 +1,16 @@
 console.log("hello world!")
 
-const mainElem = document.getElementById('main')
-const resultElement = document.getElementById('result')
+// const mainElem = document.getElementById('main')
+const blockResultElement = document.getElementById('blockValid')
+const blockTableElement = document.getElementById('blockTable')
+
 const tableElem = document.createElement('table')
 const theadElem = document.createElement('thead')
 const tbodyElem = document.createElement('tbody')
+tableElem.appendChild(theadElem)
+tableElem.appendChild(tbodyElem)
+const resultValidElem = document.createElement('span')
+resultValidElem.setAttribute('id', 'result')
 
 const doTest =[
     [1, 0, 0, 0, 0, 1, 1, 0, 0, 0],
@@ -36,10 +42,8 @@ for( let i = 0; i < doTest.length; i++){
 function validateBattlefield(field) {
   return true
 }
+resultValidElem.textContent = (`${validateBattlefield(doTest)}`)
 
-tableElem.appendChild(theadElem)
-tableElem.appendChild(tbodyElem)
-mainElem.appendChild(tableElem)
 
-resultElement.textContent = (`${validateBattlefield(doTest)}`)
-console.log(mainElem);
+blockTableElement.appendChild(tableElem)
+blockResultElement.appendChild(resultValidElem)
