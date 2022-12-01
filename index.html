@@ -4,43 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeWars</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-color: #ccc;
-        }
-
-        #blockTable {
-            display: flex;
-            justify-content: center;
-        }
-        #blockValid {
-            text-align: center;
-            margin: 20px 0;
-        }
-        #blockValid>span{
-            padding: 5px;
-            border: 3px double blue;
-        }
-        td{
-
-            padding: 3px 5px;
-            font-size: 3rem;
-            border: 1px solid black;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
+    <title>Battleship</title>
 </head>
 <body>
     <header>
         <h1>Battleship</h1>
     </header>
-    <main id="main">
-        <div id="blockValid"></div>
-        <div id="blockTable"></div>
+    <main class="main">
+        <div class="display"></div>
+        <div class="blockTable"></div>
     </main>
     <footer></footer>
     <script src="index.js"></script>
